@@ -46,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93F449A52947267600CC5BB5 /* MIT.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MIT.txt; sourceTree = "<group>"; };
 		OBJ_10 /* DeclarativeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarativeStackView.swift; sourceTree = "<group>"; };
 		OBJ_11 /* StackContentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackContentBuilder.swift; sourceTree = "<group>"; };
 		OBJ_14 /* DeclarativeStackViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarativeStackViewTests.swift; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
+				93F449A52947267600CC5BB5 /* MIT.txt */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_12 /* Tests */,
