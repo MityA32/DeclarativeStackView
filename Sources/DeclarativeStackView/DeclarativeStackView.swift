@@ -11,15 +11,15 @@ import UIKit
 
 public class DeclarativeStackView: UIStackView {
     
-    static var vertical: DeclarativeStackView = {
+    public static var vertical: DeclarativeStackView = {
         initialize(with: .vertical)
     }()
     
-    static var horizontal: DeclarativeStackView = {
+    public static var horizontal: DeclarativeStackView = {
         initialize(with: .horizontal)
     }()
     
-    static func initialize(with axis: NSLayoutConstraint.Axis) -> DeclarativeStackView {
+    public static func initialize(with axis: NSLayoutConstraint.Axis) -> DeclarativeStackView {
         let stackView = DeclarativeStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = axis
@@ -29,7 +29,7 @@ public class DeclarativeStackView: UIStackView {
 }
 
 
-extension DeclarativeStackView {
+public extension DeclarativeStackView {
     
     @discardableResult
     func alignment(_ alignment: UIStackView.Alignment) -> Self {

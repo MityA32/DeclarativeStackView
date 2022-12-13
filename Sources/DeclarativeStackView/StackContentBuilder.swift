@@ -8,37 +8,37 @@
 import UIKit
 
 @resultBuilder
-struct StackContentBuilder {
+public struct StackContentBuilder {
     
-    static func buildBlock(_ components: LayoutGroup...) -> [UIView] {
+    public static func buildBlock(_ components: LayoutGroup...) -> [UIView] {
         components.flatMap { $0.views }
     }
 
-    static func buildEither(first component: LayoutGroup) -> [UIView] {
+    public static func buildEither(first component: LayoutGroup) -> [UIView] {
         component.views
     }
     
-    static func buildEither(second component: LayoutGroup) -> [UIView] {
+    public static func buildEither(second component: LayoutGroup) -> [UIView] {
         component.views
     }
     
-    static func buildArray(_ components: [[UIView]]) -> [UIView] {
+    public static func buildArray(_ components: [[UIView]]) -> [UIView] {
         components.flatMap { $0.views }
     }
     
-    static func buildOptional(_ component: [UIView]?) -> [UIView] {
+    public static func buildOptional(_ component: [UIView]?) -> [UIView] {
         component?.flatMap { $0.views } ?? []
     }
 }
 
-protocol LayoutGroup {
+public protocol LayoutGroup {
     var views: [UIView] { get }
 }
 
 extension UIView: LayoutGroup {
-    var views: [UIView] { [self] }
+    public var views: [UIView] { [self] }
 }
 
 extension Array: LayoutGroup where Element == UIView {
-    var views: [UIView] { self }
+    public var views: [UIView] { self }
 }
